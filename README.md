@@ -5,7 +5,7 @@
 ## 使用前提
 
 - 使用支持本地插件的 Codex，并可在终端调用 `codex` 命令。
-- 使用者需要在自己的电脑上运行镜界服务，MCP 地址为 `http://127.0.0.1:5174/mcp`。`127.0.0.1` 指向使用者自己的电脑。
+- 使用者需要在自己的电脑上运行镜界服务，服务地址须与插件内 `mcp.json` 和 `.mcp.json` 的配置一致。
 - 本包包含 skill、MCP 配置和品牌素材；镜界服务源码、服务启动器和视频处理工具需要另行准备。做视频拉片需要可用的媒体探测及抽帧工具，例如 ffprobe、ffmpeg。
 
 ## 通过 GitHub 安装
@@ -20,19 +20,19 @@ codex plugin list --marketplace jingjie-local --json
 
 仓库地址：[boyfoo/jingjie-plugin](https://github.com/boyfoo/jingjie-plugin)。
 
-## 通过本地安装包安装
+## 从本地目录安装
 
-解压 `jingjie-local-marketplace-0.1.0.zip`，保留整个 `jingjie-plugin` 目录，包括隐藏的 `.agents`、`.codex-plugin` 和 `.mcp.json`。
+克隆本仓库，或下载仓库 ZIP 并解压。保留 `.agents`、`.codex-plugin` 和 `.mcp.json` 等隐藏文件。
 
-在终端执行，把第一条命令的路径替换成解压后 `jingjie-plugin` 的实际绝对路径：
+进入包含 `README.md` 和 `.agents` 的仓库根目录，在终端执行：
 
 ```powershell
-codex plugin marketplace add "C:\你的目录\jingjie-plugin"
+codex plugin marketplace add .
 codex plugin add jingjie-shot-study@jingjie-local
 codex plugin list --marketplace jingjie-local --json
 ```
 
-本地安装时保持解压目录可用。安装后重新打开会话或按客户端提示重新加载插件，确认可以发现 `video-shot-study` 和镜界工具。先调用只读的 `jingjie_get_taxonomy` 检查连接。
+本地安装时保持该目录可用。安装后重新打开会话或按客户端提示重新加载插件，确认可以发现 `video-shot-study` 和镜界工具。先调用只读的 `jingjie_get_taxonomy` 检查连接。
 
 如果电脑上已有单独安装的同名 skill 或 MCP，先验证插件中的入口，再按需停用旧入口，避免重复加载。本包不会自动改动原有全局配置。
 
@@ -59,5 +59,3 @@ jingjie-plugin/
 ```
 
 两份 MCP 配置连接同一个地址；通用格式使用 `streamable-http`，当前 Codex 兼容格式使用 `http`。插件清单的名称、版本、展示信息和地址保持同步。
-
-配套安装包 `jingjie-shot-study-0.1.0.zip` 只包含插件本体，供支持通用插件包的客户端导入。Codex 命令行按上面的 GitHub 或本地插件市场方式安装。

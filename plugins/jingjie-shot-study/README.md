@@ -3,7 +3,7 @@
 将有画面证据的逐镜分析、完整作者提示词核对及镜界草稿读写放进同一个插件。
 
 - `skills/video-shot-study/`：现有拉片 skill 的完整副本，包含观察方法和镜界保存规则。
-- `mcp.json`：连接 `http://127.0.0.1:5174/mcp`，需要使用者在自己的电脑上运行镜界服务。
+- `mcp.json`：镜界 MCP 连接配置，需要使用者在自己的电脑上运行与该配置匹配的镜界服务。
 - `.codex-plugin/plugin.json` 与 `.mcp.json`：当前 Codex 客户端兼容配置。
 - `assets/`：复用镜界现有品牌图标，主题色为 `#fcd535`。
 
@@ -24,4 +24,4 @@ codex plugin marketplace add https://github.com/boyfoo/jingjie-plugin.git
 codex plugin add jingjie-shot-study@jingjie-local
 ```
 
-也可使用配套的 `jingjie-local-marketplace-0.1.0.zip`，解压后按根目录 README 操作。
+也可进入本地仓库根目录，运行 `codex plugin marketplace add .`，再执行上面的插件安装命令。详细步骤见仓库根目录 README。
