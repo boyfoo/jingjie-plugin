@@ -1,0 +1,20 @@
+{
+  "name": "jingjie-local",
+  "interface": {
+    "displayName": "镜界"
+  },
+  "plugins": [
+    {
+      "name": "jingjie-shot-study",
+      "source": {
+        "source": "local",
+        "path": "./plugins/jingjie-shot-study"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

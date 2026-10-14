@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "jingjie-shot-study",
+  "version": "0.1.0",
+  "description": "基于真实画面逐镜拉片，核对完整作者提示词及来源，并按用户授权通过镜界 MCP 保存或修改草稿。",
+  "author": {
+    "name": "镜界"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "镜界拉片",
+        "shortDescription": "有画面证据的拉片与镜界草稿管理",
+        "longDescription": "核验视频素材、观察镜头边界与衔接、分析镜头语言，并核对作者提示词全文和时间段。完成拉片后主动询问是否提交，已有授权时直接保存或修改镜界编辑稿。连接本机镜界 MCP 服务，需要使用者自行运行该服务。",
+        "developerName": "镜界",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "defaultPrompt": "使用 $video-shot-study 对这个视频做有画面证据的拉片，核对完整提示词来源；仅在我要求时提交到镜界。",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/composer-icon.png",
+        "brandColor": "#fcd535",
+        "brandColorDark": "#fcd535"
+      }
+    }
+  }
+}
