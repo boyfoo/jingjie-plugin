@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "基于真实画面逐镜拉片，核对完整作者提示词及来源，并按用户授权通过镜界 MCP 保存或修改草稿。",
   "author": {
     "name": "镜界"
