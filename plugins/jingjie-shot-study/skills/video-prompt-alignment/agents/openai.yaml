@@ -1,0 +1,10 @@
+interface:
+  display_name: "拉片增强：提示词与画面关系"
+  short_description: "经用户明确选择后，在已有拉片基础上深入分析画面与文字的对应、关系及差异"
+  default_prompt: "使用 $video-prompt-alignment 在 video-shot-study 的拉片基础上深化提示词与画面的关系，复用已有观察，解释具体呈现、时空关系、差异与判断限制。"
+policy:
+  # 关闭根据普通请求自动选用本技能；技能仍保留，用户可以显式调用。
+  # 默认先由 video-shot-study 完成拉片及已授权的 MCP 提交、回读，再询问是否深入。
+  # 用户同意后，由基础技能按链接读取本技能继续；回复“要”即可，无需输入技能名。
+  # 此开关只管隐式调用；等待确认由 SKILL.md 的流程说明约束，不是后端审批锁。
+  allow_implicit_invocation: false

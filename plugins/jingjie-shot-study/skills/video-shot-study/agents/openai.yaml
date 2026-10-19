@@ -1,4 +1,4 @@
 interface:
-  display_name: "视频拉片与镜界提交"
-  short_description: "从真实视频逐镜分析、核对完整提示词，并按授权保存到镜界草稿"
+  display_name: "视频逐镜拉片"
+  short_description: "完成真实视频逐镜拉片与已授权草稿提交，提交核实后询问是否深入画面与文字对应"
   default_prompt: "使用 $video-shot-study 对这个视频做有画面证据的拉片，核对完整提示词来源；仅在我要求时提交到镜界。"

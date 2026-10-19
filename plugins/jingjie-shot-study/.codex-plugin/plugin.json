@@ -1,7 +1,7 @@
 {
   "name": "jingjie-shot-study",
-  "version": "0.2.2",
-  "description": "基于真实画面逐镜拉片，核对完整作者提示词及来源，并按用户授权通过镜界 MCP 保存或修改草稿。",
+  "version": "0.3.4",
+  "description": "以真实视频逐镜拉片为基础，按授权提交镜界草稿；提交与回读成功后询问是否深入画面与文字的对应，用户同意才启用增强分析。",
   "author": {
     "name": "镜界"
   },
@@ -9,11 +9,14 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "镜界拉片",
-    "shortDescription": "有画面证据的拉片与镜界草稿管理",
-    "longDescription": "核验视频素材、观察镜头边界与衔接、分析镜头语言，并核对作者提示词全文和时间段。完成拉片后主动询问是否提交，已有授权时直接保存或修改镜界编辑稿。连接本机镜界 MCP 服务，需要使用者自行运行该服务。",
+    "shortDescription": "逐镜拉片与用户可选的深入对应分析",
+    "longDescription": "video-shot-study 负责基础拉片、来源核实和已授权的镜界草稿提交。默认完成拉片、MCP 写入及回读核对后，再询问是否深入画面与文字的对应；用户明确同意才使用 video-prompt-alignment。增强技能关闭隐式调用，获授权后复用已有观察，深化语义、主体、时空与变化关系，解释呈现与差异。用户已主动要求深入时沿用授权。技能提供分析方法，数据结构与产品功能由具体项目设计。镜界 MCP 连接本机服务，保存仅影响编辑稿。",
     "developerName": "镜界",
     "category": "Productivity",
-    "capabilities": ["Read", "Write"],
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
     "defaultPrompt": "使用 $video-shot-study 对这个视频做有画面证据的拉片，核对完整提示词来源；仅在我要求时提交到镜界。",
     "logo": "./assets/logo.png",
     "composerIcon": "./assets/composer-icon.png",
