@@ -1,4 +1,4 @@
 interface:
-  display_name: "视频拉片与导演提示词"
-  short_description: "从参考视频提炼动作、光影与情绪，结合创作判断生成分镜和AI提示词"
-  default_prompt: "使用 $video-to-director-prompt 分析这个视频，结合我的想法判断动作逻辑与视听表达，设计我们自己的分镜、参考图方案和AI制作提示词。"
+  display_name: "视频反推提示词"
+  short_description: "根据参考视频反推可直接使用的AI生成提示词，结合创作判断配置参考图并修正试片"
+  default_prompt: "使用 $video-to-director-prompt 根据这个视频反推可直接使用的AI视频生成提示词，结合我的想法做合理改编，并说明需要哪些参考图及各自用途。"

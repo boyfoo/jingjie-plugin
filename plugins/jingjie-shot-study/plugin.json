@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
-  "version": "0.4.0",
-  "description": "真实视频逐镜拉片、可选的画面与文字对应分析，以及参考视频反推、导演改编和试片修正；按授权保存镜界草稿。",
+  "version": "0.4.1",
+  "description": "分别提供已有视频拉片、文字与画面对应分析，以及根据视频反推可直接使用的AI生成提示词；按授权保存镜界草稿。",
   "author": {
     "name": "镜界"
   },
@@ -10,8 +10,8 @@
     "com.openai": {
       "interface": {
         "displayName": "镜界拉片",
-        "shortDescription": "逐镜拉片、对应分析与导演提示词",
-        "longDescription": "video-shot-study 负责基础拉片、来源核实和已授权的镜界草稿提交。默认完成拉片、已授权的 MCP 写入及回读核对后，再询问是否深入画面与文字的对应；用户明确同意才使用 video-prompt-alignment。增强技能关闭隐式调用，获授权后复用已有观察，深化语义、主体、时空与变化关系，解释呈现与差异。用户已主动要求深入时沿用授权。video-to-director-prompt 承接用户的反推、改编和试片修正请求，从创作目的与情绪出发设计分镜、光影、参考资产和制作提示词；不要求作者原文或先提交镜界，不默认逐帧复刻。技能提供分析与创作方法，数据结构与产品功能由具体项目设计。镜界 MCP 连接本机服务，保存仅影响编辑稿。",
+        "shortDescription": "视频拉片、对应分析与视频反推提示词",
+        "longDescription": "video-shot-study 负责基础拉片、来源核实和已授权的镜界草稿提交。默认完成拉片、已授权的 MCP 写入及回读核对后，再询问是否深入画面与文字的对应；用户明确同意才使用 video-prompt-alignment。增强技能关闭隐式调用，获授权后复用已有观察，深化语义、主体、时空与变化关系，解释呈现与差异。用户已主动要求深入时沿用授权。video-to-director-prompt 是独立的视频反推提示词入口，根据参考视频和用户意图产出完整AI生成提示词及必要的参考图方案，结合导演判断合理改编，并按试片修正制作输入。普通拉片或只分析既有文字的实现情况不进入该技能；反推无需先交拉片报告、取得作者原文或提交镜界。技能提供分析与创作方法，数据结构与产品功能由具体项目设计。镜界 MCP 连接本机服务，保存仅影响编辑稿。",
         "developerName": "镜界",
         "category": "Productivity",
         "capabilities": [
