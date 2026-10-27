@@ -1,6 +1,6 @@
 {
   "name": "jingjie-shot-study",
-  "version": "0.4.1",
+  "version": "0.4.3",
   "description": "分别提供已有视频拉片、文字与画面对应分析，以及根据视频反推可直接使用的AI生成提示词；按授权保存镜界草稿。",
   "author": {
     "name": "镜界"
