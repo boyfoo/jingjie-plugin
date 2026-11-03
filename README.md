@@ -1,6 +1,6 @@
 # 镜界拉片插件
 
-版本：0.5.2。提供完整视频拉片与视频反推提示词两个技能。video-shot-study 分析已有视频的视听表达及既有文字与画面的对应；video-to-director-prompt 根据视频产出可直接使用的AI生成提示词。插件包含镜界 MCP 连接配置，使用镜界现有图标和主题色 `#fcd535`。
+版本：0.5.3。提供完整视频拉片与视频反推提示词两个技能。video-shot-study 分析已有视频的视听表达及既有文字与画面的对应；video-to-director-prompt 根据视频产出可直接使用的AI生成提示词。插件包含镜界 MCP 连接配置，使用镜界现有图标和主题色 `#fcd535`。
 
 ## 完整拉片与提示词反推
 
@@ -78,6 +78,8 @@ codex plugin list --marketplace jingjie-local --json
 两个技能按[源版语言与可选翻译流程](plugins/jingjie-shot-study/skills/video-shot-study/references/languages.md)执行：先取得实际提示词，按真实原语言保存源版并回读，再询问是否翻译。中文交流不改变作者原文语言；已有明确语言选择沿用，不重复问，已有案例不擅自改 `sourceLanguage`。无作者原文的反推任务按用户制作要求确定语言。
 
 需要翻译时，先读 `jingjie_get_translation_context`，再用 `jingjie_save_translation` 保存到同一案例的对应目标语言，保留源版。保存后回读源版和译文全文，不只看 `current`；交付使用用户所需语言的入口。深入对应与文字锚点沿用共用流程，不补写未授权模块，不改媒体、时间或分析结论，不自动发布。仅本地翻译不自动创建案例或上传。
+
+可选翻译包含自由补充标签的显示名，原标签和固定分类值保持不变。
 
 ## 包结构
 
