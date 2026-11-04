@@ -1,6 +1,15 @@
 # 镜界拉片插件
 
-版本：0.5.3。提供完整视频拉片与视频反推提示词两个技能。video-shot-study 分析已有视频的视听表达及既有文字与画面的对应；video-to-director-prompt 根据视频产出可直接使用的AI生成提示词。插件包含镜界 MCP 连接配置，使用镜界现有图标和主题色 `#fcd535`。
+版本：0.5.4。提供完整视频拉片与视频反推提示词两个技能。video-shot-study 分析已有视频的视听表达及既有文字与画面的对应；video-to-director-prompt 根据视频产出可直接使用的AI生成提示词。插件包含镜界 MCP 连接配置，使用镜界现有图标和主题色 `#fcd535`。
+
+## 0.5.4：语义拆分与遗漏检查
+
+- 按语境拆出可以独立成败的自然片段，分别判断；保留首次及切换的主体，后续沿用原文承接，并保留限定、时序和因果。
+- 修正复合要求容易整体判成 partial 的旧说明。部分匹配只在合理拆分后使用，已有支持、具体失败与证据不足分别处理，不追求状态比例。
+- 增加“原文逐句查清单、清单逐项查证据”的双向核对，专门回查未引用文字。明确 MCP 校验、译文齐全和保存成功不能证明原文无遗漏。
+- 源版要求拆分变化后，核对所有已授权目标语言的对应；仅修改插件方法不修改已有镜界案例。
+
+完整[方法、原因与完成检查](plugins/jingjie-shot-study/skills/video-shot-study/references/judgment-and-coverage.md)及[八组拆分与查漏示例](plugins/jingjie-shot-study/skills/video-shot-study/references/segmentation-examples.md)随插件分发。
 
 ## 完整拉片与提示词反推
 
