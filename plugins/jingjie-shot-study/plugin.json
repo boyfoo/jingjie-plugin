@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
   "version": "0.5.6",
-  "description": "逐镜拉片，将提示词要求逐项拆分并核验成片的符合情况、差异和证据，按授权保存镜界草稿。",
+  "description": "逐镜分析视频，逐项核对提示词要求与实际画面，说明实现情况、差异和证据，按授权保存镜界草稿。",
   "author": {
     "name": "镜界"
   },
@@ -10,15 +10,15 @@
     "com.openai": {
       "interface": {
         "displayName": "镜界拉片",
-        "shortDescription": "视频逐镜拉片与提示词画面对应分析",
-        "longDescription": "video-shot-study 完成真实视频逐镜拉片、提示词来源核验及文字与画面的深入对应。拉片前必须先取得并核实与当前视频对应的完整提示词原文；未取得则说明缺口，停止并等待用户补充，不进入分析或拉片资料写入流程。完整拉片将属性、动作、结果和关系拆成可独立核验的要求，逐项说明实际表现、证据、符合情况和原因，检查漏拆、漏判与错连，无需另行确认；复用已有观察，不从成片补写要求。局部提取、翻译和单项咨询保持请求范围。用户授权保存镜界时，将本次拉片和深入分析写入同一案例并回读，仅更新编辑稿。按源版语言和可选翻译流程执行，发布仍在镜界网站操作。",
+        "shortDescription": "视频拉片与提示词逐项对照",
+        "longDescription": "video-shot-study 先核实与视频对应的完整提示词，再逐镜观察，把能分别判断的属性、动作、结果和关系拆开核对。每项给出准确的原文引用、实际画面、证据和结论，并检查漏拆、漏判及证据用错的情况。提示词缺失或不完整时，先说明缺口并等待补充，不开始拉片或写入资料。完整拉片包含提示词与画面的深入对照，无需单独确认；局部提取、翻译或咨询按用户指定范围处理。需要保存时，按授权写入同一镜界案例的编辑稿并回读。源版采用提示词的实际语言，译文按用户选择保存。发布由用户在镜界网站操作。",
         "developerName": "镜界",
         "category": "Productivity",
         "capabilities": [
           "Read",
           "Write"
         ],
-        "defaultPrompt": "使用 $video-shot-study 对这个视频做有画面证据的拉片，核对完整提示词来源；仅在我要求时提交到镜界。",
+        "defaultPrompt": "使用 $video-shot-study 分析这个视频：先核实完整提示词及来源，再逐镜观察并逐项对照，说明实际画面、差异和证据。仅在我要求时保存到镜界草稿。",
         "logo": "./assets/logo.png",
         "composerIcon": "./assets/composer-icon.png",
         "brandColor": "#fcd535",
