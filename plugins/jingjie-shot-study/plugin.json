@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
   "version": "0.5.6",
-  "description": "由当前主代理独立完成，不使用子代理；逐镜拉片，将提示词要求逐项拆分并核验成片的符合情况、差异和证据，按授权保存镜界草稿。",
+  "description": "逐镜拉片，将提示词要求逐项拆分并核验成片的符合情况、差异和证据，按授权保存镜界草稿。",
   "author": {
     "name": "镜界"
   },
