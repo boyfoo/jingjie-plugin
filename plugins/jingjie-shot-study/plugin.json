@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
   "version": "0.5.8",
-  "description": "逐镜分析视频，逐项核对提示词要求与实际画面，说明实现情况、差异和证据，按授权保存镜界草稿。",
+  "description": "逐镜分析视频，逐项对照提示词与画面。完整拉片直接保存到镜界草稿并返回链接。",
   "author": {
     "name": "镜界"
   },
@@ -11,14 +11,14 @@
       "interface": {
         "displayName": "镜界拉片",
         "shortDescription": "视频拉片与提示词逐项对照",
-        "longDescription": "video-shot-study 先核实与视频对应的完整提示词，再逐镜观察，把能分别判断的属性、动作、结果和关系拆开核对。每项给出准确的原文引用、实际画面、证据和结论，并检查漏拆、漏判及证据用错的情况。提示词缺失或不完整时，先说明缺口并等待补充，不开始拉片或写入拉片资料。完整拉片包含提示词与画面的深入对照，无需单独确认；局部提取、翻译或咨询按用户指定范围处理。需要保存时，按授权写入同一镜界案例的编辑稿并回读。源版采用提示词的实际语言，译文按用户选择保存。发布由用户在镜界网站操作。",
+        "longDescription": "完整拉片开始时读取镜界要求，提前了解要留哪些资料和字段限制。核实完整提示词后，再逐镜观察并逐项对照原文，写清实际画面、差异和依据。提示词缺失或不完整时先等待补充。分析范围由任务和素材决定，保存时直接复用已有记录。用户在镜界草稿里浏览完整分析，核对后交付链接。局部分析和提取按指定范围处理。每种选定的目标语言都翻译整个案例。",
         "developerName": "镜界",
         "category": "Productivity",
         "capabilities": [
           "Read",
           "Write"
         ],
-        "defaultPrompt": "使用 $video-shot-study 分析这个视频：先核实完整提示词及来源，再逐镜观察并逐项对照，说明实际画面、差异和证据。仅在我要求时保存到镜界草稿。",
+        "defaultPrompt": "使用 $video-shot-study 对这个视频做完整拉片。先读取镜界提交要求，核实完整提示词后再看画面。将逐镜分析和逐项对照保存到同一镜界草稿，核对后返回链接。",
         "logo": "./assets/logo.png",
         "composerIcon": "./assets/composer-icon.png",
         "brandColor": "#fcd535",
