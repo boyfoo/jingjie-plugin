@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "jingjie-shot-study",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "逐镜分析视频，逐项核对提示词要求与实际画面，说明实现情况、差异和证据，按授权保存镜界草稿。",
   "author": {
     "name": "镜界"
