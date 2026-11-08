@@ -2,7 +2,7 @@
 
 完整拉片从提示词核实和逐镜分析一直做到保存镜界草稿。用户可以直接打开草稿查看画面、原文引用和对应分析。
 
-**能分别成立或失败的要求要拆开核对，每项引用也要准确对应原文。** 每项保留主体、条件和适用范围，根据自己的证据作判断。本项只有一部分得到直接支持时，可以记部分匹配，并写清已看到什么、还差什么或哪里没看清。分析后从原文查漏项，再逐项核对引用和证据。方法与表达可以灵活选择，接口成功不代表分析已经完成。详见[分析方法](skills/video-shot-study/references/judgment-and-coverage.md)和[拆分示例](skills/video-shot-study/references/segmentation-examples.md)。
+**能分别成立或失败的要求要拆开核对，每项引用也要准确对应原文。** 每项保留主体、条件和适用范围，根据自己的证据作判断。成片符合要求判已实现，不符或未呈现判失配；资料或能力不足、确实无法核实时记待核。写明判断依据，取证尚未完成时先补查。分析后从原文查漏项，再逐项核对引用和证据。方法与表达可以灵活选择，接口成功不代表分析已经完成。详见[分析方法](skills/video-shot-study/references/judgment-and-coverage.md)和[拆分示例](skills/video-shot-study/references/segmentation-examples.md)。
 
 ## 包含内容
 
