@@ -1,6 +1,6 @@
 {
   "name": "jingjie-shot-study",
-  "version": "0.5.8",
+  "version": "0.5.10",
   "description": "逐镜分析视频，逐项对照提示词与画面。完整拉片直接保存到镜界草稿并返回链接。",
   "author": {
     "name": "镜界"
